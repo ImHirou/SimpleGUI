@@ -25,5 +25,15 @@ void Button::draw(sf::RenderWindow &window, sf::Font font) {
     } else {
         rect.setFillColor(sf::Color(120, 120, 120));
     }
+    sf::Text text;
+    text.setFont(font);
+    text.setString(m_title);
+    text.setPosition(m_pos);
+    text.move(2, 0);
+    int charSize=40;
+    while(charSize*m_title.size() >= m_size.x+m_pos.x) charSize--;
+    text.setCharacterSize(charSize);
+    text.setFillColor(sf::Color::White);
     window.draw(rect);
+    window.draw(text);
 }

@@ -5,7 +5,8 @@ int main() {
     sf::RenderWindow window(sf::VideoMode(800, 600), "Transparent Window");
 
     sf::Font font;
-    Button button(sf::Vector2f (100, 100), sf::Vector2f (200, 50));
+    font.loadFromFile("F:\\MyCodes\\Lightsed\\fonts\\VCR_OSD_MONO_1.001.ttf");
+    Button button(sf::Vector2f (100, 100), sf::Vector2f (200, 50), "dobre");
 
     while (window.isOpen()) {
 
